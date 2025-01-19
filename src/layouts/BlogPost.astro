@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from "astro:content";
+import TagList from "@components/TagList.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, pubDate, tags } = Astro.props;
+---
+
+<article>
+  <header>
+    <h1>{title}</h1>
+    <FormattedDate date={pubDate} />
+  </header>
+  <slot />
+
+  {
+    tags && (
+      <footer>
+        <h4>Tags</h4>
+        <TagList tags={tags} />
+      </footer>
+    )
+  }
+</article>

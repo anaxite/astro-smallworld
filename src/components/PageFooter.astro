@@ -1,0 +1,20 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <p>&copy; 2024-{currentYear} Your name here</p>
+  <nav>    <ul>
+    <li><a href="/about">GitHub</a></li>
+    <li><a href="/blog">Astro</a></li>
+    {/* Add other navbar entries here */}
+  </ul>
+</nav>
+</footer>
+{/* CSS required to keep footer at the bottom of the page */}
+<style>
+  footer {
+    position: sticky;
+    top: 100vh;
+  }
+</style>

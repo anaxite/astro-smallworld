@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@layouts/Base.astro";
+import TagLink from "@components/TagLink.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
+const tags = posts
+  .flatMap((post) => post.data.tags)
+  .filter((tag, index, self) => self.indexOf(tag) === index);
+---
+
+<Base title="List of blog tags">
+  <h1>Post tags</h1>
+  <ul>
+    {
+      tags.map((tag) => (
+        <li>
+          <TagLink tag={tag} />
+        </li>
+      ))
+    }
+  </ul>
+</Base>

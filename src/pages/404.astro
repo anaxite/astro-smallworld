@@ -1,0 +1,20 @@
+---
+import Base from "@layouts/Base.astro";
+---
+
+<Base title="Page not found - 404">
+  <section>
+    <h1>404: not found</h1>
+    The requested URL was not found.
+    <a href="/">Go back to the home page?</a>
+  </section>
+</Base>
+{/* This CSS is not strictly necessary,
+  * but a centered 404 message looks nicer. */}
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
