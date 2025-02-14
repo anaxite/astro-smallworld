@@ -1,5 +1,5 @@
 ---
-
+import NavLink from "./NavLink.astro"
 ---
 
 <header>
@@ -12,8 +12,8 @@
       </li>
     </ul>
     <ul>
-      <li><a href="/about">About</a></li>
-      <li><a href="/blog">Blog</a></li>
+      <li><NavLink path="about">About</NavLink></li>
+      <li><NavLink path="blog">Blog</NavLink></li>
       {/* Add other navbar entries here */}
     </ul>
   </nav>
