@@ -82,6 +82,9 @@ A post must have `title`, `description` and `pubDate` keywords in its frontmatte
 
 To see a post template, see the file in `src/templates`.
 
+## Notes
+
+The examples in this README use NPM. Any Node.js package manager supported by Astro should work; I include a PNPM package file by default.
 
 ## About Astro
 
