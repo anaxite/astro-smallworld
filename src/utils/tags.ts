@@ -17,6 +17,8 @@ export function tagToSlug(tag: string): string {
  * Posts without tags are safely ignored.
  * Order reflects the order tags are first encountered across posts.
  */
-export function getUniqueTags(posts: { data: { tags?: string[] } }[]): string[] {
+export function getUniqueTags(
+  posts: { data: { tags?: string[] } }[],
+): string[] {
   return [...new Set(posts.flatMap((post) => post.data.tags ?? []))];
 }
