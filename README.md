@@ -1,6 +1,6 @@
 # smallworld
 
-_This is a template for the static site generator [Astro](https://astro.build/)._
+_This is a template for the static site generator [Astro](https://astro.build/). Now updated for Astro 6!_
 
 I like Astro, but I don't like spending hours messing with customizations I don't need. This template is based on a few key principles for my own site:
 
