@@ -1,4 +1,2 @@
 [tools]
-node = "22"
-npm = "11"
-pnpm = "10"
+node = "24"
