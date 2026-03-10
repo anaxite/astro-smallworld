@@ -15,12 +15,12 @@
     "@astrojs/check": "^0.9.7",
     "@astrojs/rss": "^4.0.17",
     "@picocss/pico": "^2.1.1",
-    "astro": "^6.0.1",
+    "astro": "^6.0.2",
     "sharp": "^0.34.5",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "prettier": "3.8.1",
+    "prettier": "~3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "sass": "^1.97.3"
   }
