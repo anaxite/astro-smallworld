@@ -2,13 +2,13 @@
 import { getCollection } from "astro:content";
 import Base from "@layouts/Base.astro";
 import TagLink from "@components/TagLink.astro";
+import { getUniqueTags } from "@utils/tags";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+const posts = await getCollection("blog");
+//case-insensitive tag sorting
+const tags = getUniqueTags(posts).sort((a, b) =>
+  a.localeCompare(b, undefined, { sensitivity: "base" }),
 );
-const tags = posts
-  .flatMap((post) => post.data.tags)
-  .filter((tag, index, self) => self.indexOf(tag) === index);
 ---
 
 <Base title="List of blog tags">
