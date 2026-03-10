@@ -43,7 +43,9 @@ posts.forEach((post) => {
                     <FormattedDate date={post.data.pubDate} />
                   </span>
                   &#8195;
-                  <a href={`/blog/${post.id}`} class="contrast">{post.data.title}</a>
+                  <a href={`/blog/${post.id}`} class="contrast">
+                    {post.data.title}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -53,8 +55,8 @@ posts.forEach((post) => {
   </article>
 </Base>
 <style>
-  span{
-    display:inline-block;
+  span {
+    display: inline-block;
     min-width: 10ch;
   }
 </style>
