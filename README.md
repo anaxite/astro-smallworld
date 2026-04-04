@@ -2,14 +2,15 @@
 
 _This is a template for the static site generator [Astro](https://astro.build/). Now updated for Astro 6!_
 
-I like Astro, but I don't like spending hours messing with customizations I don't need. This template is based on a few key principles for my own site:
+I like Astro, but I don't like spending hours customizing styles. I made this template based on a few key principles:
 
-- I wanted a basic website with a single-author blog.
+- I want a basic website with a single-author blog.
 - The website should incorporate accessible and usable elements.
-- Complex systems should be avoided in favor of simpler ones.
-- I should be able to easily understand what I see.
+- Avoid complex systems, prefer simpler ones.
+- Things I see should be easy to understand.
 
-The result is an Astro template that heavily limits the use of CSS classes, and maximizes the use of semantic HTML.
+The result is an Astro template that barely uses CSS classes, and maximizes the use of semantic HTML.
+It not only makes for a functional site, but is also great to start learning how Astro works!
 
 ## Quickstart
 
@@ -24,13 +25,13 @@ npm run build
 
 ### Install
 
-1. Install Astro.
+1. Install Astro:
 
 ```shell
 npm create astro@latest -- --template anaxite/astro-smallworld
 ```
 
-2. Install this template's dependencies, if you didn't already.
+2. Install this template's dependencies, if you didn't already:
 
 ```shell
 cd <install-directory>
@@ -50,8 +51,6 @@ npm run build
 npm run format
 ```
 
-If you use mise-en-place for your tooling, this project comes with a mise configuration file.
-
 ### Configure site settings
 
 Site-wide settings are stored in `src/settings.ts`. This is also where you can set the favicon file name, and Open Graph image settings.
@@ -60,7 +59,7 @@ Site-wide settings are stored in `src/settings.ts`. This is also where you can s
 
 The file `src/styles/main.scss` controls which CSS elements Pico CSS includes in the final site. See [the Pico CSS website](https://picocss.com/docs/sass) for information about these elements. 
 
-> Building your project may show deprecation warnings due to how Pico CSS writes its SASS files. These warnings are non-fatal and can be ignored for now.. 
+> A site build may show Pico CSS warnings. These warnings are generally non-fatal and can be ignored. 
 
 ### Add and edit pages
 
@@ -70,7 +69,7 @@ Use the Base layout to wrap your content in semantically-correct `<main>` tags. 
 
 To start with a basic page template, see the file in `src/templates`.
 
-### Navigation
+### Edit navigation
 
 To add a page to the site navigation, edit the `PageHeader.astro` component directly.
 
@@ -84,7 +83,10 @@ To see a post template, see the file in `src/templates`.
 
 ## Notes
 
-The examples in this README use NPM. Any Node.js package manager supported by Astro should work; I include a PNPM package file by default.
+For your convenience, I added a few tooling things:
+
+- Any Node.js package manager supported by Astro should work. I include a bit of PNPM config by default.
+- This project comes with a `mise-en-place` configuration file.
 
 ## About Astro
 
